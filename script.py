@@ -15,10 +15,22 @@ def calculate_shipping_cost(from_coords, to_coords, shipping_type = 'Overnight')
 test_function(calculate_shipping_cost)
 
 # Define calculate_driver_cost() here
-
+def calculate_driver_costs(distance, *drivers):
+    cheapest_driver = None
+    cheapest_driver_price = None
+    for driver in drivers:
+        driver_time = driver.speed * distance
+        price_for_driver = driver.salary * driver_time
+        if cheapest_driver is None:
+            cheapest_driver = driver
+            cheapest_driver_price = price_for_driver
+        elif price_for_driver < cheapest_driver_price:
+            cheapest_driver = driver
+            cheapest_driver_price = price_for_driver
+    return cheapest_driver_price, cheapest_driver
 
 # Test the function by calling 
-# test_function(calculate_driver_cost)
+test_function(calculate_driver_costs)
 
 # Define calculate_money_made() here
 
