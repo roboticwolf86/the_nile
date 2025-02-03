@@ -12,7 +12,7 @@ def calculate_shipping_cost(from_coords, to_coords, shipping_type = 'Overnight')
     price = distance * shipping_rate
     return format_price(price)
 # Test the function by calling 
-
+test_function(calculate_shipping_cost)
 
 # Define calculate_driver_cost() here
 
