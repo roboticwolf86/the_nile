@@ -41,4 +41,4 @@ def calculate_money_made(**trips):
     return total_money_made
 
 # Test the function by calling 
-# test_function(calculate_money_made)
+test_function(calculate_money_made)
