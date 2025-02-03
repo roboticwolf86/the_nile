@@ -8,7 +8,9 @@ def calculate_shipping_cost(from_coords, to_coords, shipping_type):
     distance = get_distance(from_lat, from_long, to_lat, to_long)
 # The following is a secondary way of writing the above line:
 #   distance = get_distance(*from_coords, *to_coords)    
-
+    shipping_rate = SHIPPING_PRICES[shipping_type]
+    price = distance * shipping_rate
+    return format_price(price)
 # Test the function by calling 
 
 
