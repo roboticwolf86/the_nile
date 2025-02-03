@@ -30,7 +30,7 @@ def calculate_driver_costs(distance, *drivers):
     return cheapest_driver_price, cheapest_driver
 
 # Test the function by calling 
-# test_function(calculate_driver_cost)
+test_function(calculate_driver_costs)
 
 # Define calculate_money_made() here
 
